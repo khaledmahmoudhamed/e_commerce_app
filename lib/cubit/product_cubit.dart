@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/core/exceptions/exceptions_model.dart';
 import 'package:e_commerce_app/cubit/product_state.dart';
 import 'package:e_commerce_app/models/product_model.dart';
 import 'package:e_commerce_app/repository/products_repo.dart';
@@ -13,15 +14,16 @@ class ProductCubit extends Cubit<ProductState> {
 
   List<ProductModel> allProducts = [];
   Future<dynamic> getProducts() async {
-    print("get products");
     emit(LoadingProducts());
     final response = await api.getProducts();
     response.fold(
       (error) {
         emit(
           FailedProductState(
-            error: error,
-            icon: Icon(Icons.wifi_off, size: 25.sp, color: Colors.red),
+            errorModel: ErrorModel(
+              errorMessage: error.errorMessage,
+              icon: error.icon,
+            ),
           ),
         );
       },
@@ -37,7 +39,7 @@ class ProductCubit extends Cubit<ProductState> {
       emit(SuccessProductState(productsList: List.from(allProducts)));
     } else {
       final filteredList = allProducts.where((e) {
-        return e.title.toLowerCase().contains(query.toLowerCase());
+        return e.title.toLowerCase().startsWith(query.toLowerCase());
       }).toList();
       emit(SuccessProductState(productsList: filteredList));
     }

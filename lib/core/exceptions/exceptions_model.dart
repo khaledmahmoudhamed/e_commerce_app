@@ -1,9 +1,11 @@
-class ErrorModel {
+import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
+
+class ErrorModel extends Equatable {
   final String errorMessage;
+  final Icon? icon;
 
-  ErrorModel({required this.errorMessage});
-
-  factory ErrorModel.fromJson(Map<String, dynamic> json) {
-    return ErrorModel(errorMessage: json["ApiKey.errorMessage"]);
-  }
+  @override
+  List<Object> get props => [errorMessage];
+  const ErrorModel({required this.errorMessage, this.icon});
 }

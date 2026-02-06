@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/core/exceptions/exceptions_model.dart';
 import 'package:e_commerce_app/models/product_model.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +23,8 @@ class SuccessProductState extends ProductState {
 }
 
 class FailedProductState extends ProductState {
-  final String error;
-  final Icon icon;
-  FailedProductState({required this.error, required this.icon});
+  final ErrorModel errorModel;
+  FailedProductState({required this.errorModel});
   @override
-  List<Object?> get props => [error, icon];
+  List<Object?> get props => [errorModel];
 }

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:dio/dio.dart';
 import 'package:e_commerce_app/core/api/api_services.dart';
 import 'package:e_commerce_app/core/api/end_points.dart';
@@ -35,6 +37,7 @@ class WebServices extends ApiServices {
         return ProductModel.fromJson(e);
       }).toList();
     } on DioException catch (e) {
+      print("########### Handle dio exception");
       handelDioExceptions(e);
     }
   }

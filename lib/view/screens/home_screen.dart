@@ -1,5 +1,7 @@
 import 'package:e_commerce_app/cubit/product_cubit.dart';
 import 'package:e_commerce_app/cubit/product_state.dart';
+import 'package:e_commerce_app/view/widgets/failed_load_product_screen.dart';
+import 'package:e_commerce_app/view/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
@@ -53,84 +55,15 @@ class HomeScreen extends StatelessWidget {
             return Center(child: CircularProgressIndicator());
           } else if (state is SuccessProductState) {
             final products = state.productsList;
-            return GridView.builder(
-              itemCount: products.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 0.9,
-              ),
-              itemBuilder: (context, index) {
-                final item = products[index];
-                return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 1.w, vertical: .5.h),
-                  // height: 15.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5.sp),
-                    color: Colors.grey,
-                  ),
-                  child: Column(
-                    children: [
-                      Expanded(
-                        child: ClipRRect(
-                          // 2. Add rounded corners to the image too
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(5.sp),
-                          ),
-                          child: Image.network(
-                            item.thumbnail,
-                            width: double.infinity,
-                            fit: BoxFit
-                                .cover, // 3. Make image fill the space nicely
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(4.sp),
-                        child: Text(
-                          item.title,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            );
+            return ProductCard(products: products);
           } else if (state is FailedProductState) {
             return RefreshIndicator(
               onRefresh: () async {
                 await context.read<ProductCubit>().getProducts();
               },
-              child: LayoutBuilder(
-                builder: (BuildContext context, BoxConstraints constraints) {
-                  return SingleChildScrollView(
-                    physics: AlwaysScrollableScrollPhysics(),
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        minHeight: constraints.maxHeight,
-                      ),
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(child: state.icon),
-                            Center(
-                              child: Text(
-                                state.error,
-                                style: TextStyle(
-                                  fontSize: 20.sp,
-                                  color: Colors.red,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  );
-                },
+              child: FailedLoadProductScreen(
+                icon: state.errorModel.icon!,
+                text: state.errorModel.errorMessage,
               ),
             );
           } else {
