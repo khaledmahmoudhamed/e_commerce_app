@@ -1,10 +1,13 @@
-import 'package:e_commerce_app/cubit/product_cubit.dart';
-import 'package:e_commerce_app/cubit/product_state.dart';
+import 'package:e_commerce_app/cubit/product_cubit/product_cubit.dart';
+import 'package:e_commerce_app/cubit/product_cubit/product_state.dart';
+import 'package:e_commerce_app/view/screens/favorite_screen.dart';
+import 'package:e_commerce_app/view/screens/product_details_screen.dart';
 import 'package:e_commerce_app/view/widgets/failed_load_product_screen.dart';
-import 'package:e_commerce_app/view/widgets/product_card.dart';
+import 'package:e_commerce_app/view/widgets/home_product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
+import '../widgets/text_filed.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -21,28 +24,14 @@ class HomeScreen extends StatelessWidget {
               horizontal: 4.w,
               vertical: 2.h,
             ),
-            child: TextField(
+            child: TextFiledWidget(
               controller: controller,
-              style: TextStyle(color: Colors.white, fontSize: 18.sp),
-              decoration: InputDecoration(
-                hintText: "Search products...",
-                fillColor: Colors.blueGrey,
-                filled: true,
-                prefixIcon: Icon(Icons.search),
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    controller.clear();
-                    context.read<ProductCubit>().filteredProducts("");
-                  },
-                  icon: Icon(Icons.clear, size: 25.sp),
-                ),
-
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15.sp),
-                ),
-              ),
-              onChanged: (val) {
+              getFilteredProducts: (val) {
                 context.read<ProductCubit>().filteredProducts(val);
+              },
+              removeSearch: () {
+                context.read<ProductCubit>().filteredProducts("");
+                controller.clear();
               },
             ),
           ),
@@ -55,7 +44,22 @@ class HomeScreen extends StatelessWidget {
             return Center(child: CircularProgressIndicator());
           } else if (state is SuccessProductState) {
             final products = state.productsList;
-            return ProductCard(products: products);
+            return state.productsList.isEmpty
+                ? Center(
+                    child: Text(
+                      "No Results",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.sp,
+                      ),
+                    ),
+                  )
+                : ProductCard(
+                    products: products,
+                    onPressed: (product) {
+                      context.read<ProductCubit>().toggleFavoriteItem(product);
+                    },
+                  );
           } else if (state is FailedProductState) {
             return RefreshIndicator(
               onRefresh: () async {
