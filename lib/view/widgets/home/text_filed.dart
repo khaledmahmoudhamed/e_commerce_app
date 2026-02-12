@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../cubit/product_cubit/product_cubit.dart';
-
 class TextFiledWidget extends StatelessWidget {
   const TextFiledWidget({
     super.key,

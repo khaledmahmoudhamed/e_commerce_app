@@ -2,7 +2,7 @@ import 'package:e_commerce_app/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../screens/product_details_screen.dart';
+import '../../screens/product_details_screen.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({

@@ -21,7 +21,7 @@ class _ProductDetailsContentState extends State<ProductDetailsText> {
 
   String _getTruncatedText(String text) {
     if (text.length <= 70) return text;
-    return text.substring(0, (widget.product.description.length / 2).toInt());
+    return text.substring(0, (text.length / 2).toInt());
   }
 
   @override
@@ -71,36 +71,6 @@ class _ProductDetailsContentState extends State<ProductDetailsText> {
                     ),
                   ),
                 ),
-
-                // Text(
-                //   maxLines: isExpanded ? null : 2,
-                //   textAlign: TextAlign.start,
-                //   overflow: isExpanded
-                //       ? TextOverflow.visible
-                //       : TextOverflow.ellipsis,
-                //   widget.product.description,
-                //   style: TextStyle(
-                //     fontSize: 15.sp,
-                //     fontWeight: FontWeight.bold,
-                //   ),
-                // ),
-                // GestureDetector(
-                //   onTap: () {
-                //     isDescriptionExpanded.value =
-                //         !isDescriptionExpanded.value;
-                //   },
-                //   child: Text(
-                //     isExpanded ? "Show Less" : "Read More",
-                //     style: TextStyle(
-                //       decoration: TextDecoration.underline,
-                //       decorationColor: Colors.red,
-                //       decorationThickness: 2,
-                //       fontWeight: FontWeight.bold,
-                //       fontSize: 17.sp,
-                //       color: Colors.red,
-                //     ),
-                //   ),
-                // ),
               ],
             );
           },

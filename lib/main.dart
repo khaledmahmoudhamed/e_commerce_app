@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
-import 'cubit/navigation_cubit.dart';
+import 'cubit/navigation/navigation_cubit.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
