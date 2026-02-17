@@ -5,4 +5,18 @@ abstract class ApiServices {
     Map<String, dynamic>? queryParameters,
     bool isFormData = false,
   });
+
+  Future<dynamic> post(
+    String endPoint, {
+    Map<String, dynamic> queryParameters,
+    Object? data,
+    bool isFormData = false,
+  });
+
+  Future<dynamic> getProfileData(
+    String endPoint, {
+    Map<String, dynamic>? queryParameters,
+    Object? data,
+    bool isFormData = false,
+  });
 }

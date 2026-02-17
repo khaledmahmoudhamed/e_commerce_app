@@ -1,16 +1,16 @@
-import 'dart:math';
-
 import 'package:dio/dio.dart';
+import 'package:e_commerce_app/core/api/api_interceptor.dart';
 import 'package:e_commerce_app/core/api/api_services.dart';
 import 'package:e_commerce_app/core/api/end_points.dart';
 import 'package:e_commerce_app/core/exceptions/server_exceptions.dart';
 
-import '../../models/product_model.dart';
+import '../../models/products/product_model.dart';
 
 class WebServices extends ApiServices {
   final Dio dio;
   WebServices({required this.dio}) {
     dio.options.baseUrl = EndPoints.baseUrl;
+    dio.interceptors.add(ApiInterceptor());
     dio.interceptors.add(
       LogInterceptor(
         error: true,
@@ -37,7 +37,44 @@ class WebServices extends ApiServices {
         return ProductModel.fromJson(e);
       }).toList();
     } on DioException catch (e) {
-      print("########### Handle dio exception");
+      handelDioExceptions(e);
+    }
+  }
+
+  @override
+  Future<dynamic> post(
+    String endPoint, {
+    Map<String, dynamic>? queryParameters,
+    Object? data,
+    bool isFormData = false,
+  }) async {
+    try {
+      final response = await dio.post(
+        endPoint,
+        data: data,
+        queryParameters: queryParameters,
+      );
+      return response;
+    } on DioException catch (e) {
+      handelDioExceptions(e);
+    }
+  }
+
+  @override
+  Future<dynamic> getProfileData(
+    String endPoint, {
+    Map<String, dynamic>? queryParameters,
+    Object? data,
+    bool isFormData = false,
+  }) async {
+    try {
+      final response = await dio.get(
+        endPoint,
+        data: data,
+        queryParameters: queryParameters,
+      );
+      return response;
+    } on DioException catch (e) {
       handelDioExceptions(e);
     }
   }

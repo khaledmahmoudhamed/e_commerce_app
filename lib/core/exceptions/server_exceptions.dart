@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:e_commerce_app/models/auth/auth_error_model.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -6,7 +7,8 @@ import 'exceptions_model.dart';
 
 class ServerException implements Exception {
   ErrorModel errorModel;
-  ServerException({required this.errorModel});
+  AuthErrorModel? authErrorModel;
+  ServerException({required this.errorModel, this.authErrorModel});
 }
 
 void handelDioExceptions(DioException e) {
@@ -42,9 +44,16 @@ void handelDioExceptions(DioException e) {
       );
     case DioExceptionType.badResponse:
       if (e.response != null) {
-        throw ServerException(
-          errorModel: ErrorModel(errorMessage: "Bad Response"),
-        );
+        final data = e.response!.data;
+        if (data is Map<String, dynamic>) {
+          throw ServerException(errorModel: ErrorModel.fromJson(data));
+        } else {
+          throw ServerException(
+            errorModel: ErrorModel(
+              errorMessage: e.response?.statusMessage ?? "Bad Response",
+            ),
+          );
+        }
       } else {
         throw ServerException(
           errorModel: ErrorModel(

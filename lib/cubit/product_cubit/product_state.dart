@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/core/exceptions/exceptions_model.dart';
-import 'package:e_commerce_app/models/product_model.dart';
+import 'package:e_commerce_app/models/products/product_model.dart';
 import 'package:equatable/equatable.dart';
 
 sealed class ProductState extends Equatable {}

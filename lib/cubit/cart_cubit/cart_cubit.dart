@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:e_commerce_app/cubit/cart_cubit/cart_state.dart';
-import 'package:e_commerce_app/repository/products_repo.dart';
+import 'package:e_commerce_app/repository/app_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CartCubit extends Cubit<CartState> {
@@ -14,7 +14,7 @@ class CartCubit extends Cubit<CartState> {
       emit(CartState(cartItems: cartItems));
     });
   }
-  final ProductsRepo repo;
+  final AppRepo repo;
   StreamSubscription? subscription;
 
   void changeQuantity(int productId, bool isIncremented) {

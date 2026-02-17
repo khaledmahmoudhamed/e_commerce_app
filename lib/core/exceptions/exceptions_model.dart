@@ -8,4 +8,8 @@ class ErrorModel extends Equatable {
   @override
   List<Object> get props => [errorMessage];
   const ErrorModel({required this.errorMessage, this.icon});
+
+  factory ErrorModel.fromJson(Map<String, dynamic> error) {
+    return ErrorModel(errorMessage: error['message']);
+  }
 }

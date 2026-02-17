@@ -1,13 +1,25 @@
 import 'dart:async';
 
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:e_commerce_app/core/exceptions/exceptions_model.dart';
 import 'package:e_commerce_app/cubit/product_cubit/product_state.dart';
-import 'package:e_commerce_app/models/product_model.dart';
-import 'package:e_commerce_app/repository/products_repo.dart';
+import 'package:e_commerce_app/models/products/product_model.dart';
+import 'package:e_commerce_app/repository/app_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductCubit extends Cubit<ProductState> {
   ProductCubit({required this.repo}) : super(InitialState()) {
+    print("############# product cubit");
+    _connectivitySubscription = Connectivity().onConnectivityChanged.listen((
+      List<ConnectivityResult> results,
+    ) {
+      print("############# connections state ${results is ConnectivityResult}");
+      if (!results.contains(ConnectivityResult.none)) {
+        if (state is LoadingProducts || state is FailedProductState) {
+          getProducts();
+        }
+      }
+    });
     subscription = repo.productController.listen((updatedList) {
       allProducts = List.from(updatedList);
       if (currentQuery.isEmpty) {
@@ -17,13 +29,17 @@ class ProductCubit extends Cubit<ProductState> {
       }
     });
   }
+
+  StreamSubscription? _connectivitySubscription;
+
   @override
   Future<void> close() {
     subscription?.cancel();
+    _connectivitySubscription?.cancel();
     return super.close();
   }
 
-  final ProductsRepo repo;
+  final AppRepo repo;
   StreamSubscription? subscription;
   List<ProductModel> allProducts = [];
   String currentQuery = "";
@@ -55,7 +71,7 @@ class ProductCubit extends Cubit<ProductState> {
       emit(SuccessProductState(productsList: List.from(allProducts)));
     } else {
       final filteredList = allProducts.where((element) {
-        return element.title.contains(query.toLowerCase());
+        return element.title.toLowerCase().contains(query.toLowerCase());
       }).toList();
       emit(SuccessProductState(productsList: filteredList));
     }
@@ -83,6 +99,7 @@ class ProductCubit extends Cubit<ProductState> {
     final resetProduct = allProducts.map((e) {
       return e.copyWith(quantity: 0, isInCart: false);
     }).toList();
+    repo.setProducts(resetProduct);
     emit(SuccessProductState(productsList: resetProduct));
   }
 }
