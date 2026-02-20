@@ -1,19 +1,20 @@
 import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:e_commerce_app/cache/cache_helper.dart';
+import 'package:e_commerce_app/cache/hive.dart';
+import 'package:e_commerce_app/controller/product_cubit/product_state.dart';
+import 'package:e_commerce_app/core/api/end_points.dart';
 import 'package:e_commerce_app/core/exceptions/exceptions_model.dart';
-import 'package:e_commerce_app/cubit/product_cubit/product_state.dart';
 import 'package:e_commerce_app/models/products/product_model.dart';
 import 'package:e_commerce_app/repository/app_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductCubit extends Cubit<ProductState> {
   ProductCubit({required this.repo}) : super(InitialState()) {
-    print("############# product cubit");
-    _connectivitySubscription = Connectivity().onConnectivityChanged.listen((
+    subscription = Connectivity().onConnectivityChanged.listen((
       List<ConnectivityResult> results,
     ) {
-      print("############# connections state ${results is ConnectivityResult}");
       if (!results.contains(ConnectivityResult.none)) {
         if (state is LoadingProducts || state is FailedProductState) {
           getProducts();
@@ -30,12 +31,9 @@ class ProductCubit extends Cubit<ProductState> {
     });
   }
 
-  StreamSubscription? _connectivitySubscription;
-
   @override
   Future<void> close() {
     subscription?.cancel();
-    _connectivitySubscription?.cancel();
     return super.close();
   }
 
@@ -49,18 +47,13 @@ class ProductCubit extends Cubit<ProductState> {
     final response = await repo.getProducts();
     response.fold(
       (error) {
-        emit(
-          FailedProductState(
-            errorModel: ErrorModel(
-              errorMessage: error.errorMessage,
-              icon: error.icon,
-            ),
-          ),
-        );
+        emit(FailedProductState(errorModel: ErrorModel(errorMessage: error)));
       },
       (products) {
         allProducts = products;
         repo.setProducts(products);
+        repo.loadDataFromHive();
+
         emit(SuccessProductState(productsList: products));
       },
     );
@@ -78,15 +71,8 @@ class ProductCubit extends Cubit<ProductState> {
     currentQuery = query;
   }
 
-  void toggleFavoriteItem(ProductModel productModel) {
-    repo.toggleFavorite(productModel.id);
-
-    ///Todo
-    // using filteredProducts here with currentQuery to prevent appearing all products when you toggle favorite
-    // but if you are going to use emit and use stream you can remove it
-    // filteredProducts(currentQuery);
-    // we should not use emit(SuccessProductState(productsList: List.from(allProducts)));
-    // here because it return all products when i toggle favorite
+  void toggleFavoriteItem(int id) {
+    repo.toggleFavorite(id);
     filteredProducts(currentQuery);
   }
 

@@ -1,10 +1,10 @@
-import 'package:e_commerce_app/cubit/product_cubit/product_cubit.dart';
-import 'package:e_commerce_app/cubit/product_cubit/product_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
+import '../../../controller/cart_cubit/cart_cubit.dart';
+import '../../../controller/product_cubit/product_cubit.dart';
+import '../../../controller/product_cubit/product_state.dart';
 import '../../../core/reusable_widgets/reusable_button.dart';
-import '../../../cubit/cart_cubit/cart_cubit.dart';
 
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
@@ -12,7 +12,7 @@ class FavoriteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       body: BlocBuilder<ProductCubit, ProductState>(
         builder: (BuildContext context, state) {
           if (state is SuccessProductState) {
@@ -25,10 +25,8 @@ class FavoriteScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset('assets/no data2.jpg'),
-                    Text(
-                      "No Favorites Yet",
-                      style: TextStyle(fontSize: 20.sp, color: Colors.black54),
-                    ),
+                    SizedBox(height: 2.h),
+                    Text("No Favorites Yet", style: TextStyle(fontSize: 20.sp)),
                   ],
                 ),
               );
@@ -94,7 +92,7 @@ class FavoriteScreen extends StatelessWidget {
                                               context
                                                   .read<ProductCubit>()
                                                   .toggleFavoriteItem(
-                                                    favoriteItems[index],
+                                                    favoriteItems[index].id,
                                                   );
                                             },
                                             child: CircleAvatar(

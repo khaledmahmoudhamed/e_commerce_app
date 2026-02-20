@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:e_commerce_app/controller/theme/theme_cubit.dart';
 import 'package:e_commerce_app/models/products/product_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../product_detials/screens/product_details_screen.dart';
@@ -40,7 +42,11 @@ class ProductCard extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black12,
+                  color: context.read<ThemeCubit>().state == ThemeMode.light
+                      ? Colors.black45
+                      : Colors.white24,
+                  blurStyle: BlurStyle.outer,
+                  offset: Offset(0, 1),
                   blurRadius: 4,
                   spreadRadius: 1,
                 ),

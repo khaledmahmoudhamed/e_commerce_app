@@ -52,7 +52,6 @@ class _ProductDetailsContentState extends State<ProductDetailsText> {
                               : _getTruncatedText(widget.product.description),
                           style: TextStyle(
                             fontSize: 15.sp,
-                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

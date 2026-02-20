@@ -22,7 +22,7 @@ class ProductDetailsCard extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.sp),
-        color: Colors.black12,
+        color: Colors.black45,
       ),
       child: Column(
         children: [
@@ -36,7 +36,6 @@ class ProductDetailsCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
                   ),
                 ),
                 Text(
@@ -44,7 +43,6 @@ class ProductDetailsCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
                   ),
                 ),
                 Text(
@@ -52,7 +50,6 @@ class ProductDetailsCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
                   ),
                 ),
               ],
@@ -64,11 +61,7 @@ class ProductDetailsCard extends StatelessWidget {
             children: [
               Text(
                 "\$${product.price}",
-                style: TextStyle(
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
+                style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
               ),
               Row(
                 children: [
@@ -79,7 +72,6 @@ class ProductDetailsCard extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
                     ),
                   ),
                 ],

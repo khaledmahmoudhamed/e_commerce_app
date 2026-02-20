@@ -28,7 +28,7 @@ class ProductHeaderDetailsWidget extends StatelessWidget {
           height: 30.h,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.black12,
+            color: Colors.black,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(25.sp),
               bottomRight: Radius.circular(25.sp),
@@ -102,7 +102,10 @@ class ProductHeaderDetailsWidget extends StatelessWidget {
                     ),
                     child: Text(
                       product.brand,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                   Container(
@@ -117,7 +120,10 @@ class ProductHeaderDetailsWidget extends StatelessWidget {
                     ),
                     child: Text(
                       product.category,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ],

@@ -1,11 +1,11 @@
-import 'package:e_commerce_app/cubit/auth/auth_cubit.dart';
-import 'package:e_commerce_app/cubit/auth/auth_state.dart';
 import 'package:e_commerce_app/initial_screen.dart';
 import 'package:e_commerce_app/view/authantications/screens/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../controller/auth/auth_cubit.dart';
+import '../../../controller/auth/auth_state.dart';
 import '../../../core/reusable_widgets/app_messages.dart';
 import '../../../core/reusable_widgets/reusable_button.dart';
 import '../widgets/divider_section.dart';

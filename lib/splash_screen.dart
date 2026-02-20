@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/cache/cache_helper.dart';
+import 'package:e_commerce_app/cache/hive.dart';
 import 'package:e_commerce_app/core/api/api_interceptor.dart';
 import 'package:e_commerce_app/core/api/end_points.dart';
 import 'package:e_commerce_app/initial_screen.dart';
@@ -16,7 +17,8 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreen extends State<SplashScreen> {
   Future<void> _checkAuth() async {
     await Future.delayed(Duration(seconds: 2));
-    final token = CacheHelper().getData(key: ApiKey.accessToken);
+    // final token = CacheHelper().getData(key: ApiKey.accessToken);
+    final token = HiveCache.users?.get(ApiKey.accessToken);
     if (token != null) {
       NavigationService.navigateToReplacement(InitialScreen());
     } else {
@@ -38,7 +40,7 @@ class _SplashScreen extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.shopping_bag_outlined, size: 80.sp, color: Colors.white),
+            Icon(Icons.shopping_bag_outlined, size: 60.sp, color: Colors.white),
             SizedBox(height: 2.h),
             Text(
               "E-Commerce App",

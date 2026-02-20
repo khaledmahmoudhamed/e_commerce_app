@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 
@@ -23,7 +24,10 @@ class FacebookAndGoogleAuth extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SvgPicture.asset("assets/facebook.svg", height: 3.5.h),
-              Text("Facebook", style: TextStyle(fontSize: 18.sp)),
+              Text(
+                "Facebook",
+                style: TextStyle(fontSize: 18.sp, color: Colors.black),
+              ),
             ],
           ),
         ),
@@ -37,7 +41,10 @@ class FacebookAndGoogleAuth extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SvgPicture.asset("assets/google.svg", height: 3.5.h),
-              Text("Google", style: TextStyle(fontSize: 18.sp)),
+              Text(
+                "Google",
+                style: TextStyle(fontSize: 18.sp, color: Colors.black),
+              ),
             ],
           ),
         ),

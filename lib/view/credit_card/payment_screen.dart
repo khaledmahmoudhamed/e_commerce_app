@@ -1,14 +1,12 @@
-import 'dart:math';
-
-import 'package:e_commerce_app/cubit/cart_cubit/cart_cubit.dart';
-import 'package:e_commerce_app/cubit/cart_cubit/cart_state.dart';
-import 'package:e_commerce_app/cubit/product_cubit/product_cubit.dart';
 import 'package:e_commerce_app/view/credit_card/widgets/credit_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../controller/cart_cubit/cart_cubit.dart';
+import '../../controller/cart_cubit/cart_state.dart';
+import '../../controller/product_cubit/product_cubit.dart';
 import '../../core/reusable_widgets/arrow_back_oulined_ios.dart';
 import '../../core/reusable_widgets/show_dialog.dart';
 import '../cart/widgets/bottom_sheet_widget.dart';

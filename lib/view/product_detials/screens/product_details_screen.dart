@@ -1,11 +1,11 @@
-import 'package:e_commerce_app/cubit/cart_cubit/cart_cubit.dart';
-import 'package:e_commerce_app/cubit/product_cubit/product_cubit.dart';
-import 'package:e_commerce_app/cubit/product_cubit/product_state.dart';
 import 'package:e_commerce_app/models/products/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../controller/cart_cubit/cart_cubit.dart';
+import '../../../controller/product_cubit/product_cubit.dart';
+import '../../../controller/product_cubit/product_state.dart';
 import '../widgets/add_to_cart_button.dart';
 import '../widgets/extras_product_details.dart';
 import '../widgets/product_details_card.dart';
@@ -34,11 +34,15 @@ class ProductDetailsScreen extends StatelessWidget {
                 ProductHeaderDetailsWidget(
                   product: product,
                   onPressed: () {
-                    context.read<ProductCubit>().toggleFavoriteItem(product);
+                    context.read<ProductCubit>().toggleFavoriteItem(product.id);
                   },
                   icon: currentProduct.isFavorite
                       ? Icon(Icons.favorite, color: Colors.red, size: 18.sp.sp)
-                      : Icon(Icons.favorite_border, size: 18.sp),
+                      : Icon(
+                          Icons.favorite_border,
+                          size: 18.sp,
+                          color: Colors.black,
+                        ),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 4.h),

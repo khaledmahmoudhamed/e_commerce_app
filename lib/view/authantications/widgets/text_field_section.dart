@@ -1,9 +1,9 @@
-import 'package:e_commerce_app/cubit/toggle/toggle_cubit.dart';
-import 'package:e_commerce_app/cubit/toggle/toggle_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../controller/toggle/toggle_cubit.dart';
+import '../../../controller/toggle/toggle_state.dart';
 import '../../../core/reusable_widgets/reusable_text_form_field.dart';
 
 class TextFieldSection extends StatelessWidget {
@@ -31,6 +31,7 @@ class TextFieldSection extends StatelessWidget {
               children: [
                 SizedBox(height: 1.h),
                 ReusableTextFormField(
+                  textStyle: TextStyle(color: Colors.black),
                   keyboardType: isSignInScreen == false && e == 2
                       ? TextInputType.phone
                       : TextInputType.text,
@@ -39,8 +40,6 @@ class TextFieldSection extends StatelessWidget {
                       return "* required";
                     }
                     if (e == 4) {
-                      print("############ password${controller[3].text}");
-                      print("############ confirm${controller[4].text}");
                       if (controller[3].text != controller[4].text) {
                         return "password doesn't match";
                       }
@@ -60,8 +59,11 @@ class TextFieldSection extends StatelessWidget {
                                 .togglePasswordVisibility();
                           },
                           icon: !state.togglePasswordVisibility
-                              ? Icon(Icons.remove_red_eye_outlined)
-                              : Icon(Icons.remove_red_eye),
+                              ? Icon(
+                                  Icons.remove_red_eye_outlined,
+                                  color: Colors.black,
+                                )
+                              : Icon(Icons.remove_red_eye, color: Colors.black),
                         )
                       : !isSignInScreen && e == 3 || e == 4
                       ? IconButton(
@@ -71,8 +73,11 @@ class TextFieldSection extends StatelessWidget {
                                 .togglePasswordVisibility();
                           },
                           icon: state.togglePasswordVisibility
-                              ? Icon(Icons.remove_red_eye)
-                              : Icon(Icons.remove_red_eye_outlined),
+                              ? Icon(Icons.remove_red_eye, color: Colors.black)
+                              : Icon(
+                                  Icons.remove_red_eye_outlined,
+                                  color: Colors.black,
+                                ),
                         )
                       : SizedBox(),
                   filled: true,
@@ -87,6 +92,7 @@ class TextFieldSection extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15.sp),
                   ),
                   hintText: text[e],
+                  hintStyle: TextStyle(color: Colors.black),
                 ),
               ],
             );

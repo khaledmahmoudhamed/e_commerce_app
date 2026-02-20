@@ -14,4 +14,8 @@ class ApiKey {
   static String image = "image";
   static String id = "id";
   static String accessToken = "accessToken";
+  static String themeKey = "isDark";
+  static String favorite = "favorite";
+  static String cart = "cart";
+  static String quantity = "quantity";
 }

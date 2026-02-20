@@ -1,7 +1,8 @@
-import 'package:e_commerce_app/cubit/toggle/toggle_cubit.dart';
-import 'package:e_commerce_app/cubit/toggle/toggle_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../controller/toggle/toggle_cubit.dart';
+import '../../../controller/toggle/toggle_state.dart';
 
 class PrivacyPolicySection extends StatelessWidget {
   const PrivacyPolicySection({super.key});
@@ -31,18 +32,12 @@ class PrivacyPolicySection extends StatelessWidget {
               child: RichText(
                 text: TextSpan(
                   children: [
-                    TextSpan(
-                      text: "I'm agree to The",
-                      style: TextStyle(color: Colors.black),
-                    ),
+                    TextSpan(text: "I'm agree to The"),
                     TextSpan(
                       text: " Terms of Service",
                       style: TextStyle(color: Colors.blue),
                     ),
-                    TextSpan(
-                      text: " and",
-                      style: TextStyle(color: Colors.black),
-                    ),
+                    TextSpan(text: " and"),
                     TextSpan(
                       text: " Privacy Policy",
                       style: TextStyle(color: Colors.blue),

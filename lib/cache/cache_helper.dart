@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/core/api/end_points.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CacheHelper {
@@ -59,5 +60,13 @@ class CacheHelper {
     } else {
       return await sharedPreferences.setInt(key, value);
     }
+  }
+
+  Future<bool> saveThemeMode(bool isDark) async {
+    return sharedPreferences.setBool(ApiKey.themeKey, isDark);
+  }
+
+  bool getTheme() {
+    return sharedPreferences.getBool(ApiKey.themeKey) ?? false;
   }
 }

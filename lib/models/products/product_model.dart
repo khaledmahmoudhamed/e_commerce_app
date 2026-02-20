@@ -55,6 +55,21 @@ class ProductModel extends Equatable {
       isInCart: false,
     );
   }
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'price': price,
+      "description": description,
+      'thumbnail': thumbnail,
+      'isFavorite': isFavorite,
+      "rating": rating,
+      "brand": brand,
+      "category": category,
+      'isInCart': isInCart,
+      'quantity': quantity,
+    };
+  }
 
   ProductModel copyWith({bool? isFavorite, int? quantity, bool? isInCart}) {
     return ProductModel(

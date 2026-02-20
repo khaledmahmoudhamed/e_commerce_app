@@ -35,12 +35,12 @@ class LoadingRegisterState extends AuthState {
 
 class SuccessRegisterState extends AuthState {
   final SignUpModel model;
-  final bool isHidden;
+  // final bool isHidden;
 
-  SuccessRegisterState({required this.model, required this.isHidden});
+  SuccessRegisterState({required this.model});
 
   @override
-  List<Object> get props => [model, isHidden];
+  List<Object> get props => [model];
 }
 
 class FailedRegisterState extends AuthState {

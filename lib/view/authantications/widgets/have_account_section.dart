@@ -15,7 +15,7 @@ class HaveAccountSection extends StatelessWidget {
           children: [
             TextSpan(
               text: "Do you have an account? ",
-              style: TextStyle(fontSize: 16.sp, color: Colors.black),
+              style: TextStyle(fontSize: 17.sp),
             ),
             TextSpan(
               recognizer: TapGestureRecognizer()..onTap = onTap,

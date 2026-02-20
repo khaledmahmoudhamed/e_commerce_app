@@ -62,6 +62,7 @@ class CartContainerWidget extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 15.sp,
+                    color: Colors.black,
                   ),
                 ),
                 SizedBox(height: 2.h),
@@ -70,6 +71,7 @@ class CartContainerWidget extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 15.sp,
+                    color: Colors.black,
                   ),
                 ),
                 SizedBox(height: 5.h),
@@ -78,6 +80,7 @@ class CartContainerWidget extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18.sp,
+                    color: Colors.black,
                   ),
                 ),
               ],

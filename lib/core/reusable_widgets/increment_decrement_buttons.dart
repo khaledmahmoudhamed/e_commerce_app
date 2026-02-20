@@ -33,7 +33,11 @@ class IncrementDecrementButtons extends StatelessWidget {
           SizedBox(width: 4.w),
           Text(
             counter.toString(),
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp),
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18.sp,
+              color: Colors.black,
+            ),
           ),
           SizedBox(width: 2.w),
           InkWell(

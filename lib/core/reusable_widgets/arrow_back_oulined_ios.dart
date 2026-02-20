@@ -10,9 +10,12 @@ class ArrowBackIos extends StatelessWidget {
       padding: EdgeInsetsGeometry.symmetric(horizontal: 1.w),
       alignment: Alignment.center,
       height: 10.h,
-      width: 10.w,
+      width: 11.w,
       decoration: BoxDecoration(color: Colors.white, shape: BoxShape.circle),
-      child: IconButton(onPressed: onPressed, icon: Icon(Icons.arrow_back_ios)),
+      child: IconButton(
+        onPressed: onPressed,
+        icon: Icon(Icons.arrow_back_ios, color: Colors.black),
+      ),
     );
   }
 }

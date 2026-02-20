@@ -1,10 +1,9 @@
 import 'dart:async';
 
-import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:e_commerce_app/cubit/auth/auth_state.dart';
-import 'package:e_commerce_app/cubit/product_cubit/product_state.dart';
 import 'package:e_commerce_app/repository/app_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
   final AppRepo repo;
@@ -27,7 +26,7 @@ class AuthCubit extends Cubit<AuthState> {
         emit(FailedRegisterState(message: error));
       },
       (success) {
-        emit(SuccessRegisterState(model: success, isHidden: !success.isHidden));
+        emit(SuccessRegisterState(model: success));
       },
     );
   }

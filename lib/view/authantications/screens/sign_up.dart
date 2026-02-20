@@ -1,13 +1,13 @@
 import 'package:e_commerce_app/core/reusable_widgets/app_messages.dart';
 import 'package:e_commerce_app/core/reusable_widgets/reusable_button.dart';
-import 'package:e_commerce_app/cubit/auth/auth_cubit.dart';
-import 'package:e_commerce_app/cubit/auth/auth_state.dart';
 import 'package:e_commerce_app/view/authantications/screens/login.dart';
 import 'package:e_commerce_app/view/authantications/widgets/header_section.dart';
 import 'package:e_commerce_app/view/authantications/widgets/privacy_policy_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
+import '../../../controller/auth/auth_cubit.dart';
+import '../../../controller/auth/auth_state.dart';
 import '../widgets/divider_section.dart';
 import '../widgets/facebook_and_google_auth.dart';
 import '../widgets/have_account_section.dart';

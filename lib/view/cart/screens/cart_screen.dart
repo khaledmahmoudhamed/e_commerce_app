@@ -1,10 +1,10 @@
-import 'package:e_commerce_app/cubit/cart_cubit/cart_cubit.dart';
-import 'package:e_commerce_app/cubit/cart_cubit/cart_state.dart';
 import 'package:e_commerce_app/view/credit_card/payment_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sizer/sizer.dart';
+import '../../../controller/cart_cubit/cart_cubit.dart';
+import '../../../controller/cart_cubit/cart_state.dart';
 import '../../../core/reusable_widgets/arrow_back_oulined_ios.dart';
 import '../../../core/reusable_widgets/show_dialog.dart';
 import '../widgets/bottom_sheet_widget.dart';
@@ -21,9 +21,9 @@ class CartScreen extends StatelessWidget {
         });
         final delivery = subTotal * 3 / 100;
         return Scaffold(
-          backgroundColor: Colors.white,
+          // backgroundColor: Colors.white,
           appBar: AppBar(
-            backgroundColor: Colors.white,
+            // backgroundColor: Colors.white,
             leadingWidth: 17.w,
             leading: Navigator.of(context).canPop()
                 ? Padding(
@@ -49,15 +49,10 @@ class CartScreen extends StatelessWidget {
                         "assets/empty-cart.svg",
                         fit: BoxFit.cover,
                         alignment: Alignment.center,
+                        color: Colors.red,
                       ),
                       SizedBox(height: 3.h),
-                      Text(
-                        "Cart Is Empty",
-                        style: TextStyle(
-                          fontSize: 20.sp,
-                          color: Colors.black54,
-                        ),
-                      ),
+                      Text("Cart Is Empty", style: TextStyle(fontSize: 20.sp)),
                     ],
                   ),
                 )

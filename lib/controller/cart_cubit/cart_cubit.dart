@@ -1,7 +1,10 @@
 import 'dart:async';
-import 'package:e_commerce_app/cubit/cart_cubit/cart_state.dart';
+import 'package:e_commerce_app/cache/hive.dart';
+import 'package:e_commerce_app/core/api/end_points.dart';
 import 'package:e_commerce_app/repository/app_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'cart_state.dart';
 
 class CartCubit extends Cubit<CartState> {
   CartCubit({required this.repo}) : super(CartState(cartItems: [])) {
@@ -13,6 +16,7 @@ class CartCubit extends Cubit<CartState> {
           .toList();
       emit(CartState(cartItems: cartItems));
     });
+    repo.loadDataFromHive();
   }
   final AppRepo repo;
   StreamSubscription? subscription;
@@ -23,10 +27,6 @@ class CartCubit extends Cubit<CartState> {
 
   void isInCart(int productId, bool isInCart) {
     repo.toggleInCart(productId, isInCart);
-  }
-
-  void clearCart() {
-    emit(CartState(cartItems: []));
   }
 
   @override
