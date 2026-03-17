@@ -1,21 +1,28 @@
 # e_commerce_app
 
-A new Flutter project.
+A high-performance e-commerce mobile application built with Flutter, featuring a sleek dark-themed UI and real-time data integration. This project demonstrates advanced UI implementation and robust state management for a modern shopping experience.
 
 ## Getting Started
+🚀 Features
+Dynamic Product Catalog: Real-time search and filtering of beauty products, including detailed product views with ratings and quantity selectors.
+Seamless Authentication: Integrated login system supporting traditional credentials and social logins (Google/Facebook).
+Persistent Shopping Cart: Fully functional cart with real-time subtotal, delivery, and total calculation.
+Secure Payment Simulation: Interactive checkout process including a credit card payment gateway with real-time validation.
+User Profile Management: Personalized user dashboard displaying contact information, address details, and secure logout.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🛠 Tech Stack
+Frontend: Flutter & Dart
+Data Source: DummyJSON API (used for product data, user profiles, and login simulation).
+State Management: Bloc/Cubit (for handling cart updates and UI states)
+Key Packages:
+dio: For efficient API communication.
+flutter_bloc: To manage complex application logic.
+hive: For local data persistence.
+🏗 Setup
+Clone the repo: git clone https://github.com/your-username/e-commerce-app.git
+Install dependencies: flutter pub get
+Run the app: flutter run
 <p align="center">
-  
  <img src="https://github.com/user-attachments/assets/5bf19585-0ba4-4651-91fa-f548c8a29e61" width="30%" />
   <img src="https://github.com/user-attachments/assets/630b7b69-cc4b-4544-b2e7-836d3c2e11fa" width="30%" />
     <img src="https://github.com/user-attachments/assets/1d7cc313-c3fa-42d3-901a-244d5f3b9a92" width="30%" />
