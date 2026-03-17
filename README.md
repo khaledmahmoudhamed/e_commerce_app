@@ -19,9 +19,11 @@ dio: For efficient API communication.
 flutter_bloc: To manage complex application logic.
 hive: For local data persistence.
 🏗 Setup
-Clone the repo: git clone https://github.com/your-username/e-commerce-app.git
+Clone the repo: git clone https://github.com/khaledmahmoudhamed/e_commerce_app.git
 Install dependencies: flutter pub get
 Run the app: flutter run
+
+🚀App Screens
 <p align="center">
  <img src="https://github.com/user-attachments/assets/5bf19585-0ba4-4651-91fa-f548c8a29e61" width="30%" />
   <img src="https://github.com/user-attachments/assets/630b7b69-cc4b-4544-b2e7-836d3c2e11fa" width="30%" />
