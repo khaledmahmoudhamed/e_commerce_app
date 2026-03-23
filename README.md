@@ -72,7 +72,11 @@ UI Performance: Optimized the main product grid using Sliver widgets to maintain
 <img src="https://github.com/user-attachments/assets/653fcf24-1a12-463b-9edb-3bb58f5adb9f" width="30%" />
 </p>
 
-![Recording_20260317_164336 00_02_50--00_03_10](https://github.com/user-attachments/assets/2e07826a-3a1d-4c7e-8875-171d61f41458)
+### 🎥 App Demo (Recordings)
+
+<img src="https://github.com/user-attachments/assets/2e07826a-3a1d-4c7e-8875-171d61f41458" width="30%" />
+* [Recording 1](https://github.com/user-attachments/assets/2e07826a-3a1d-4c7e-8875-171d61f41458)
+* [Recording 2](https://github.com/user-attachments/assets/2e07826a-3a1d-4c7e-8875-171d61f41458)
 ![Recording_20260317_164336 00_02_30--00_02_50](https://github.com/user-attachments/assets/b5b85aec-f036-4837-bdb5-98b48ed438d2)
 ![Recording_20260317_164336 00_02_12--00_02_32](https://github.com/user-attachments/assets/9d1d4de6-f7dc-4543-a14f-90195de0020f)
 ![Recording_20260317_164336 00_01_51--00_02_11](https://github.com/user-attachments/assets/17e1da85-cc04-480c-9b66-a2a147f4c9f8)
