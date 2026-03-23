@@ -28,6 +28,22 @@ lib/
 ├── presentation/    # Screens (Home, Details, Cart, Checkout) and reusable Widgets.
 └── main.dart        # Dependency injection and app initialization.
 
+🚀 Getting Started
+1-🚀 Getting Started
+git clone [https://github.com/your-username/ecommerce-app.git](https://github.com/your-username/ecommerce-app.git)
+2-Install dependencies:
+flutter pub get
+3-Run Code Generation (if using Hive/JsonSerializable):
+dart run build_runner build --delete-conflicting-outputs
+4-Run the application:
+flutter run
+
+🧩 Challenges & Engineering Solutions
+State Consistency: Synchronized the local Hive storage with the Cubit state to ensure the shopping cart remains intact even after the app is closed.
+API Optimization: Managed complex JSON structures from the DummyJSON API by building robust data models with null-safety to prevent runtime errors.
+UI Performance: Optimized the main product grid using Sliver widgets to maintain a smooth 60fps scrolling experience during heavy image loading.
+![Recording_20260317_164336 00_03_12--00_03_16](https://github.com/user-attachments/assets/570d8f40-80d4-4899-b586-fe0199f004d1)
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1d7cc313-c3fa-42d3-901a-244d5f3b9a92" width="45%" />
   <img src="https://github.com/user-attachments/assets/cdbe3146-47bf-44d8-ad87-15ffd4f2db40" width="45%" />
