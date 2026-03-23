@@ -21,7 +21,6 @@ A feature-rich, high-performance E-commerce mobile application built with **Flut
 
 ## 📂 Project Structure
 
-```text
 lib/
 ├── core/            # API endpoints, theme constants, and network interceptors.
 ├── data/            # Models (Product, Cart, User) and Data Providers.
