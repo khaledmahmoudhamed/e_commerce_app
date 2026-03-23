@@ -3,7 +3,13 @@
 
 A feature-rich, high-performance E-commerce mobile application built with **Flutter**. This project demonstrates a production-grade architecture for handling dynamic product catalogs, real-time cart management, and seamless user authentication.
 
+## ✨ Key Features
 
+* **Dynamic Product Catalog:** Fetches real-time product data, including categories, ratings, and stock levels via the **DummyJSON API**.
+* **Advanced Search & Filtering:** Instant product discovery with optimized filtering logic for a smooth user experience.
+* **Persistent Shopping Cart:** A real-time cart system that calculates totals dynamically and persists data locally.
+* **User Authentication:** Secure login and profile management flow.
+* **Simulated Checkout:** A clean, multi-step checkout process with a simulated payment gateway.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1d7cc313-c3fa-42d3-901a-244d5f3b9a92" width="45%" />
