@@ -44,7 +44,6 @@ flutter run
 State Consistency: Synchronized the local Hive storage with the Cubit state to ensure the shopping cart remains intact even after the app is closed.
 API Optimization: Managed complex JSON structures from the DummyJSON API by building robust data models with null-safety to prevent runtime errors.
 UI Performance: Optimized the main product grid using Sliver widgets to maintain a smooth 60fps scrolling experience during heavy image loading.
-
 ![Recording_20260317_164336 00_03_12--00_03_16](https://github.com/user-attachments/assets/570d8f40-80d4-4899-b586-fe0199f004d1)
 
 🚀App Screens
@@ -70,5 +69,4 @@ UI Performance: Optimized the main product grid using Sliver widgets to maintain
 <img src="https://github.com/user-attachments/assets/3b37fb36-41ec-4322-a2d9-4caba551d44b" width="30%" />
 <img src="https://github.com/user-attachments/assets/28b3e6b1-993f-4f16-af18-640f6c83d19a" width="30%" />
 <img src="https://github.com/user-attachments/assets/653fcf24-1a12-463b-9edb-3bb58f5adb9f" width="30%" />
-
 </p>
