@@ -103,19 +103,4 @@ UI Performance: Optimized the main product grid using Sliver widgets to maintain
 
 </p>
 
-### 🎥 App Demo (Recordings)
-
-<img src="https://github.com/user-attachments/assets/2e07826a-3a1d-4c7e-8875-171d61f41458" width="30%" />
-* [Recording 1](https://github.com/user-attachments/assets/2e07826a-3a1d-4c7e-8875-171d61f41458)
-* [Recording 2](https://github.com/user-attachments/assets/2e07826a-3a1d-4c7e-8875-171d61f41458)
-![Recording_20260317_164336 00_02_30--00_02_50](https://github.com/user-attachments/assets/b5b85aec-f036-4837-bdb5-98b48ed438d2)
-![Recording_20260317_164336 00_02_12--00_02_32](https://github.com/user-attachments/assets/9d1d4de6-f7dc-4543-a14f-90195de0020f)
-![Recording_20260317_164336 00_01_51--00_02_11](https://github.com/user-attachments/assets/17e1da85-cc04-480c-9b66-a2a147f4c9f8)
-![Recording_20260317_164336 00_01_31--00_01_51](https://github.com/user-attachments/assets/f38fa3bc-8b12-4157-b9f7-c5ec1c2c9961)
-![Recording_20260317_164336 00_01_12--00_01_32](https://github.com/user-attachments/assets/593c19c8-71e2-4fef-83ee-672352d9457d)
-![Recording_20260317_164336 00_00_55--00_01_15](https://github.com/user-attachments/assets/49611dd2-1f0f-402e-a75d-6c7363c060d0)
-![Recording_20260317_164336 00_00_48--00_01_08](https://github.com/user-attachments/assets/49d6066d-f481-434a-8696-534b3765e31b)
-![Recording_20260317_164336 00_00_24--00_00_44](https://github.com/user-attachments/assets/8564d2e2-990b-4d8b-bfbd-df6eac3c6216)
-![Recording_20260317_164336 00_00_00--00_00_20](https://github.com/user-attachments/assets/3e200e49-3c01-4755-92a0-830ee72c7c56)
-![Recording_20260317_164336 00_03_12--00_03_16](https://github.com/user-attachments/assets/01650daa-8b62-4d9a-aea5-3a4ae7043ac5)
 
