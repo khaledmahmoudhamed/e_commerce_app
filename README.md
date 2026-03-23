@@ -19,6 +19,15 @@ A feature-rich, high-performance E-commerce mobile application built with **Flut
 * **Local Storage:** [Hive](https://pub.dev/packages/hive) - Utilized for lightning-fast NoSQL local persistence (Cart data and User sessions).
 * **Image Caching:** `cached_network_image` to optimize performance and reduce data usage.
 
+## 📂 Project Structure
+
+```text
+lib/
+├── core/            # API endpoints, theme constants, and network interceptors.
+├── data/            # Models (Product, Cart, User) and Data Providers.
+├── logic/           # Cubits for Auth, Products, and Cart management.
+├── presentation/    # Screens (Home, Details, Cart, Checkout) and reusable Widgets.
+└── main.dart        # Dependency injection and app initialization.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1d7cc313-c3fa-42d3-901a-244d5f3b9a92" width="45%" />
