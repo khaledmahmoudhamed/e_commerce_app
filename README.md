@@ -76,4 +76,4 @@ UI Performance: Optimized the main product grid using Sliver widgets to maintain
 ![Image](https://github.com/user-attachments/assets/6e222ee0-fc6b-4926-8be8-1a4545ce1bf4)
 ![Image](https://github.com/user-attachments/assets/d468b706-d3f6-4279-8d7e-e9d9193c9f26)
 ![Image](https://github.com/user-attachments/assets/ed6fca65-b22f-4cb7-9291-b263897404d1)
-
+![Image](https://github.com/user-attachments/assets/b8d3d571-d281-4604-a24c-4bc39308c356)
