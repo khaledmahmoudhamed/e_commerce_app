@@ -1,4 +1,7 @@
 
+# Flutter E-Commerce Pro 🛒
+
+A feature-rich, high-performance E-commerce mobile application built with **Flutter**. This project demonstrates a production-grade architecture for handling dynamic product catalogs, real-time cart management, and seamless user authentication.
 
 
 
