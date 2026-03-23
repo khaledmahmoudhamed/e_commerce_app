@@ -11,6 +11,15 @@ A feature-rich, high-performance E-commerce mobile application built with **Flut
 * **User Authentication:** Secure login and profile management flow.
 * **Simulated Checkout:** A clean, multi-step checkout process with a simulated payment gateway.
 
+## 🛠 Tech Stack
+
+* **Framework:** [Flutter](https://flutter.dev) (Dart)
+* **State Management:** [Cubit / Bloc](https://pub.dev/packages/flutter_bloc) - Implemented to ensure a reactive UI and clear separation of business logic.
+* **Networking:** [Dio](https://pub.dev/packages/dio) - High-level HTTP client used for fetching data from the **DummyJSON API**.
+* **Local Storage:** [Hive](https://pub.dev/packages/hive) - Utilized for lightning-fast NoSQL local persistence (Cart data and User sessions).
+* **Image Caching:** `cached_network_image` to optimize performance and reduce data usage.
+
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1d7cc313-c3fa-42d3-901a-244d5f3b9a92" width="45%" />
   <img src="https://github.com/user-attachments/assets/cdbe3146-47bf-44d8-ad87-15ffd4f2db40" width="45%" />
