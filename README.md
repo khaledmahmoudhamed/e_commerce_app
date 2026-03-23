@@ -46,7 +46,7 @@ API Optimization: Managed complex JSON structures from the DummyJSON API by buil
 UI Performance: Optimized the main product grid using Sliver widgets to maintain a smooth 60fps scrolling experience during heavy image loading.
 ![Recording_20260317_164336 00_03_12--00_03_16](https://github.com/user-attachments/assets/570d8f40-80d4-4899-b586-fe0199f004d1)
 
-🚀App Screens
+### 📱 App Screenshots
 <p align="center">
  <img src="https://github.com/user-attachments/assets/5bf19585-0ba4-4651-91fa-f548c8a29e61" width="30%" />
   <img src="https://github.com/user-attachments/assets/630b7b69-cc4b-4544-b2e7-836d3c2e11fa" width="30%" />
