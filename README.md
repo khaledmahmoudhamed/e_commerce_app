@@ -48,8 +48,9 @@ State Consistency: Synchronized the local Hive storage with the Cubit state to e
 API Optimization: Managed complex JSON structures from the DummyJSON API by building robust data models with null-safety to prevent runtime errors.
 UI Performance: Optimized the main product grid using Sliver widgets to maintain a smooth 60fps scrolling experience during heavy image loading.
 
-![Image](https://github.com/user-attachments/assets/b988d39a-2999-4034-8601-6579adc3070d)
+
 ![Image](https://github.com/user-attachments/assets/748805a1-a535-4313-b161-85dd7b511133)
+![Image](https://github.com/user-attachments/assets/c9951ab3-1591-4f2f-9843-c403b534ec1f)
 ![Image](https://github.com/user-attachments/assets/d1982d1d-6e31-4d92-a968-8bc07582e930)
 ![Image](https://github.com/user-attachments/assets/51a36451-3f80-4cf4-abe0-73b6786755e3)
 ![Image](https://github.com/user-attachments/assets/7a113357-e9a6-4cdd-bac4-58d269ad5a56)
