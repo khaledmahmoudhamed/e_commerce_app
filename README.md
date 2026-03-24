@@ -30,7 +30,7 @@ A feature-rich, high-performance E-commerce mobile application built with **Flut
 
 ## 🚀 Getting Started
 # 1-🚀 Getting Started
-## git clone [https://github.com/your-username/ecommerce-app.git](https://github.com/your-username/ecommerce-app.git)
+# git clone [https://github.com/your-username/ecommerce-app.git](https://github.com/your-username/ecommerce-app.git)
 # 2-Install dependencies:
 *flutter pub get
 *3-Run Code Generation (if using Hive/JsonSerializable):
