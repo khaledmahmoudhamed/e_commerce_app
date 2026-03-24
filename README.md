@@ -22,16 +22,16 @@ A feature-rich, high-performance E-commerce mobile application built with **Flut
 ## 📂 Project Structure
 
 # lib/
-* ├── core/
-   # API endpoints, theme constants, and network interceptors.
-* ├── data/
-  #  Models (Product, Cart, User) and Data Providers.
-* ├── logic/
-  # Cubits for Auth, Products, and Cart management.
-* ├── presentation/
-  # Screens (Home, Details, Cart, Checkout) and reusable Widgets.
-* └── main.dart
-  # Dependency injection and app initialization.
+# ├── core/
+   * API endpoints, theme constants, and network interceptors.
+# ├── data/
+  *  Models (Product, Cart, User) and Data Providers.
+# ├── logic/
+  * Cubits for Auth, Products, and Cart management.
+# ├── presentation/
+  * Screens (Home, Details, Cart, Checkout) and reusable Widgets.
+# └── main.dart
+  * Dependency injection and app initialization.
 
 ## 🚀 Getting Started
 # 1-🚀 Getting Started
