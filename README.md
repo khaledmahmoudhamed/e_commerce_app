@@ -47,6 +47,7 @@ A feature-rich, high-performance E-commerce mobile application built with **Flut
 State Consistency: Synchronized the local Hive storage with the Cubit state to ensure the shopping cart remains intact even after the app is closed.
 API Optimization: Managed complex JSON structures from the DummyJSON API by building robust data models with null-safety to prevent runtime errors.
 UI Performance: Optimized the main product grid using Sliver widgets to maintain a smooth 60fps scrolling experience during heavy image loading.
+
 ![Image](https://github.com/user-attachments/assets/748805a1-a535-4313-b161-85dd7b511133)
 ![Image](https://github.com/user-attachments/assets/c9951ab3-1591-4f2f-9843-c403b534ec1f)
 ![Image](https://github.com/user-attachments/assets/d1982d1d-6e31-4d92-a968-8bc07582e930)
