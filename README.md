@@ -48,6 +48,17 @@ State Consistency: Synchronized the local Hive storage with the Cubit state to e
 API Optimization: Managed complex JSON structures from the DummyJSON API by building robust data models with null-safety to prevent runtime errors.
 UI Performance: Optimized the main product grid using Sliver widgets to maintain a smooth 60fps scrolling experience during heavy image loading.
 
+![Image](https://github.com/user-attachments/assets/b988d39a-2999-4034-8601-6579adc3070d)
+![Image](https://github.com/user-attachments/assets/748805a1-a535-4313-b161-85dd7b511133)
+![Image](https://github.com/user-attachments/assets/c9951ab3-1591-4f2f-9843-c403b534ec1f)
+![Image](https://github.com/user-attachments/assets/d1982d1d-6e31-4d92-a968-8bc07582e930)
+![Image](https://github.com/user-attachments/assets/51a36451-3f80-4cf4-abe0-73b6786755e3)
+![Image](https://github.com/user-attachments/assets/7a113357-e9a6-4cdd-bac4-58d269ad5a56)
+![Image](https://github.com/user-attachments/assets/0349d33b-0424-47d7-8744-9c19b233ff62)
+![Image](https://github.com/user-attachments/assets/6e222ee0-fc6b-4926-8be8-1a4545ce1bf4)
+![Image](https://github.com/user-attachments/assets/d468b706-d3f6-4279-8d7e-e9d9193c9f26)
+![Image](https://github.com/user-attachments/assets/ed6fca65-b22f-4cb7-9291-b263897404d1)
+![Image](https://github.com/user-attachments/assets/b8d3d571-d281-4604-a24c-4bc39308c356)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1d7cc313-c3fa-42d3-901a-244d5f3b9a92" width="45%" />
@@ -71,14 +82,4 @@ UI Performance: Optimized the main product grid using Sliver widgets to maintain
 <img src="https://github.com/user-attachments/assets/653fcf24-1a12-463b-9edb-3bb58f5adb9f" width="45%" />
 </p>
 
-![Image](https://github.com/user-attachments/assets/b988d39a-2999-4034-8601-6579adc3070d)
-![Image](https://github.com/user-attachments/assets/748805a1-a535-4313-b161-85dd7b511133)
-![Image](https://github.com/user-attachments/assets/c9951ab3-1591-4f2f-9843-c403b534ec1f)
-![Image](https://github.com/user-attachments/assets/d1982d1d-6e31-4d92-a968-8bc07582e930)
-![Image](https://github.com/user-attachments/assets/51a36451-3f80-4cf4-abe0-73b6786755e3)
-![Image](https://github.com/user-attachments/assets/7a113357-e9a6-4cdd-bac4-58d269ad5a56)
-![Image](https://github.com/user-attachments/assets/0349d33b-0424-47d7-8744-9c19b233ff62)
-![Image](https://github.com/user-attachments/assets/6e222ee0-fc6b-4926-8be8-1a4545ce1bf4)
-![Image](https://github.com/user-attachments/assets/d468b706-d3f6-4279-8d7e-e9d9193c9f26)
-![Image](https://github.com/user-attachments/assets/ed6fca65-b22f-4cb7-9291-b263897404d1)
-![Image](https://github.com/user-attachments/assets/b8d3d571-d281-4604-a24c-4bc39308c356)
+
