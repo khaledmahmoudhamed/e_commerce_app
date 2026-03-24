@@ -32,13 +32,13 @@ A feature-rich, high-performance E-commerce mobile application built with **Flut
 # 1-🚀 Getting Started
 # git clone [https://github.com/your-username/ecommerce-app.git](https://github.com/your-username/ecommerce-app.git)
 # 2-Install dependencies:
-*flutter pub get
-*3-Run Code Generation (if using Hive/JsonSerializable):
-*dart run build_runner build --delete-conflicting-outputs
-*4-Run the application:
-*flutter run
+# flutter pub get
+# 3-Run Code Generation (if using Hive/JsonSerializable):
+# dart run build_runner build --delete-conflicting-outputs
+# 4-Run the application:
+# flutter run
 
-🧩 Challenges & Engineering Solutions
+## 🧩 Challenges & Engineering Solutions
 State Consistency: Synchronized the local Hive storage with the Cubit state to ensure the shopping cart remains intact even after the app is closed.
 API Optimization: Managed complex JSON structures from the DummyJSON API by building robust data models with null-safety to prevent runtime errors.
 UI Performance: Optimized the main product grid using Sliver widgets to maintain a smooth 60fps scrolling experience during heavy image loading.
